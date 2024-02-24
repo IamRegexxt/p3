@@ -1,8 +1,8 @@
-import React, { useRef } from "react";
+import React from "react";
 import hero from "../assets/images/pro.jpg";
+import { TypeAnimation } from 'react-type-animation';
 
 const Hero = () => {
-
   const social_media = [
     "logo-instagram",
     "logo-facebook",
@@ -24,9 +24,18 @@ const Hero = () => {
             </span>
             My Name is <span>Jesreel A.</span>
           </h1>
-          <h4 className="md:text-2xl text-lg md:leading-normal leading-5 mt-4 font-bold text-gray-600">
-            Aspiring Web developer and Software developer
-          </h4>
+          <TypeAnimation
+            sequence={[
+              'Aspiring Web Developer',
+              1000,
+              'and Software Developer',
+              1000
+            ]}
+            wrapper="h4"
+            speed={50}
+            style={{ fontSize: '2em', display: 'inline-block' }}
+            repeat={Infinity}
+          />
           
           <div className="mt-8 text-3xl flex items-center md:justify-start justify-center gap-5">
             {social_media?.map((icon) => (
